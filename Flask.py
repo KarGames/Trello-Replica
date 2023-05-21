@@ -12,15 +12,21 @@ class TaskCard:
         self.task = task
         self.date = date
 
-@app.route("/trello", methods=["GET", "POST"])
+    def completeTask(self, taskCards):
+        taskCards.remove(self)
+
+@app.route("/", methods=["GET", "POST"])
 def trello():
     if request.method == "POST":
         task = request.form.get("task")
         date = request.form.get("date")
+
+        if task == "" or date == "":
+            return render_template("trello.html", taskCards = taskCards)
         
         taskCard = TaskCard(task, date)
         taskCards.append(taskCard)
-
+        
         return render_template("trello.html", taskCards = taskCards)
         
     return render_template("trello.html")

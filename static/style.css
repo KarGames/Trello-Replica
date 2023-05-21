@@ -5,12 +5,26 @@ h1 {
     color: cornflowerblue;
 }
 
+h2 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: coral;
+}
+
 body {
     background-image: url("images/forest.jpg");
     background-size: cover;
 }
 
+/* ul {
+    text-align: center;
+} */
+
 li {
     font-size: 25;
     color: aliceblue;
+}
+
+form {
+    text-align: center;
 }
