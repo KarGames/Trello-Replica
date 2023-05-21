@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+    font-size: 75;
+    font-family: 'Times New Roman', Times, serif;
+    color: cornflowerblue;
+}
+
+body {
+    background-image: url("images/forest.jpg");
+    background-size: cover;
+}
+
+li {
+    font-size: 25;
+    color: aliceblue;
+}
