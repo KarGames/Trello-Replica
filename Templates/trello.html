@@ -11,8 +11,9 @@
         <input type="text" name="date">
         <button type="submit">+</button>
         <ul>
-            <li>task</li>
-            <li>task2</li>
+            {% for task in taskCards %}
+            <li>{{task.task + ", " + task.date}}</li>
+            {% endfor %}
         </ul>
     </body>
 </html>
