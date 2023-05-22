@@ -16,15 +16,18 @@ body {
     background-size: cover;
 }
 
-/* ul {
-    text-align: center;
-} */
-
 li {
     font-size: 25;
     color: aliceblue;
 }
 
-form {
-    text-align: center;
+.todo {
+    list-style-type: none;
+    width: 800px;
 }
+
+.completed {
+    list-style-type: none;
+    width: 800px;
+}
+

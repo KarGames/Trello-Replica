@@ -7,14 +7,25 @@
 
     <body>
         <h2>Enter Task and Date</h2>
-        <form action="#" method="post">
+
+        <form action="#" method="post" style="text-align: center;">
         <input type="text" name="task">
         <input type="text" name="date">
         <button type="submit">+</button>
-        <ul>
+        </form>
+
+        <h2 class="todo" style="float: left;">To-Do</h2>
+        <h2 class="completed" style="float: right;">Completed</h2>
+
+        <ul class="todo">
             {% if taskCards: %}          
             {% for task in taskCards: %}
-            <li>{{task.task + " by " + task.date}}</li>
+            <li>{{task.task + " BY " + task.date}} 
+                <form action="#" method="post">
+                <input type="submit" name="{{taskCards.index(task)}}" value="Complete"></input>
+                
+                </form>
+            </li>
             {% endfor %}
             {% endif %}
         </ul>
